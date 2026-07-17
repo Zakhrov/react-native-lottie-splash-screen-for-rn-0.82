@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author       = 'taehyun'
   s.homepage     = package["homepage"]
   s.license      = package["license"]
-  s.source       = { :git => "https://github.com/attarchi/react-native-lottie-splash-screen", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/ravinandan25/react-native-lottie-splash-screen-for-rn-0.82.git", :tag => "v#{s.version}" }
   
   # Platform and deployment targets
   s.ios.deployment_target = '13.0'
