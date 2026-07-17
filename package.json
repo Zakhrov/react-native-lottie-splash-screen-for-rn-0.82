@@ -9,7 +9,8 @@
     "TaehyunHwang <taehyun_hwang@tmax.co.kr>",
     "JoongseopWon <joongseop_won@tmax.co.kr>",
     "Attarchi <attarchi@me.com>",
-    "Ravinandan <ravinandan.bhardwaj@gmail.com>"
+    "Ravinandan <ravinandan.bhardwaj@gmail.com>",
+    "Aaron <aaron.zakhrov@gmail.com>"
   ],
   "license": "MIT",
   "repository": {
@@ -21,7 +22,10 @@
   },
   "homepage": "https://github.com/ravinandan25/react-native-lottie-splash-screen-for-rn-0.82#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bare8x:install": "yarn pack && yarn workspace bare8x install && (cd examples/RN.0.8x/ios && bundle install && bundle exec pod install)",
+    "bare8x:ios": "yarn workspace bare8x ios",
+    "bare8x:android": "yarn pack && yarn workspace bare8x install &&yarn workspace bare8x android"
   },
   "keywords": [
     "react-native",
@@ -37,7 +41,11 @@
     "react-native": ">=0.82.0"
   },
   "dependencies": {
-    "lottie-ios": "4.5.0",
-    "lottie-react-native": "7.3.4"
-  }
+    "lottie-ios": ">=4.5.0",
+    "lottie-react-native": ">=7.3.4"
+  },
+  "workspaces": [
+    "./examples/*"
+  ],
+  "packageManager": "yarn@4.17.0"
 }

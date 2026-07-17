@@ -7,6 +7,7 @@
 Fixed version of `react-native-lottie-splash-screen` — resolves gray overlay and status bar issues on Android. Works on React Native 0.82+ with Swift implementation on iOS.
 
 ## Contents
+
 - Version Compatibilities
 - Examples
 - Installation
@@ -17,19 +18,21 @@ Fixed version of `react-native-lottie-splash-screen` — resolves gray overlay a
 - Contribution
 
 ## Versions Compatibilities
-| React Native | Package Version |
-|---|---|
-| >= 0.82 | 3.x |
-| >= 0.70 & < 0.77 | 2.x |
-| < 0.70 | 1.x |
+
+| React Native     | Package Version |
+|------------------|-----------------|
+| >= 0.82          | 3.x             |
+| >= 0.70 & < 0.77 | 2.x             |  
+| < 0.70           | 1.x             |
 
 ## Examples
+
 ![Android](screenshot/Lottie-Splash-Screen-Android.gif)
 ![iOS](screenshot/Lottie-Splash-Screen-IOS.gif)
 
 Run examples:
 
-```
+```bash
 yarn install
 yarn bare:install
 yarn bare:ios
@@ -40,16 +43,18 @@ yarn expo:android
 ```
 
 ## Installation
-```
+
+```bash
 yarn add "@ravinandan25/react-native-lottie-splash-screen" "lottie-react-native@7.3.4"
 cd ios && bundle install && bundle exec pod install
 ```
 
 ## iOS Setup
+
 1. Add your Lottie JSON (e.g., `loading.json`) to the Xcode project and include it in your app target.  
 2. Replace or edit your `AppDelegate.swift`:
 
-```
+```swift
 import UIKit
 import SplashScreen
 
@@ -72,12 +77,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-3. Remove the default launch screen or make it blank in `LaunchScreen.storyboard`.
+1. Remove the default launch screen or make it blank in `LaunchScreen.storyboard`.
 
 ## Android Setup
+
 1. Create `android/app/src/main/res/layout/launch_screen.xml`:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -99,19 +105,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 </LinearLayout>
 
 ```
-2. Place your Lottie JSON at `android/app/src/main/res/raw/loading.json`.
 
-3. Add colors in `android/app/src/main/res/values/colors.xml`:
+1. Place your Lottie JSON at `android/app/src/main/res/raw/loading.json`.
 
-```
+2. Add colors in `android/app/src/main/res/values/colors.xml`:
+
+```xml
 <resources>
   <color name="windowSplashScreenBackground">#ffffff</color>
 </resources>
 ```
 
-4. Add styles in `android/app/src/main/res/values/styles.xml`:
+1. Add styles in `android/app/src/main/res/values/styles.xml`:
 
-```
+```xml
 <resources>
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:editTextBackground">@drawable/rn_edit_text_material</item>
@@ -140,9 +147,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 </resources>
 ```
 
-5. Update `MainActivity.kt`:
+1. Update `MainActivity.kt`:
 
-```
+```kotlin
 import android.os.Bundle
 import org.devio.rn.splashscreen.SplashScreen
 import com.facebook.react.ReactActivity
@@ -156,7 +163,8 @@ class MainActivity : ReactActivity() {
 ```
 
 ## Usage
-```
+
+```react
 import { useEffect } from "react";
 import LottieSplashScreen from "@ravinandan25/react-native-lottie-splash-screen";
 
@@ -169,11 +177,13 @@ export default function App() {
 ```
 
 ## API
-| Method | Type | Description |
-|--------|------|-------------|
+
+| Method | Type     | Description                     |
+|--------|----------|---------------------------------|
 | hide() | function | Hides the Lottie splash overlay |
 
 ## Contribution
+
 Issues and PRs are welcome. Include a minimal repro if possible.
 
 **MIT Licensed**  
