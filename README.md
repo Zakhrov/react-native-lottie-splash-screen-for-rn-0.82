@@ -21,7 +21,8 @@ Fixed version of `react-native-lottie-splash-screen` — resolves gray overlay a
 
 | React Native     | Package Version |
 |------------------|-----------------|
-| >= 0.82          | 3.x             |
+| >= 0.82          | 4.x             |
+| >= 0.80 & < 0.82 | 3.x             |
 | >= 0.70 & < 0.77 | 2.x             |  
 | < 0.70           | 1.x             |
 
@@ -34,18 +35,16 @@ Run examples:
 
 ```bash
 yarn install
-yarn bare:install
-yarn bare:ios
-yarn bare:android
-yarn expo:install
-yarn expo:ios
-yarn expo:android
+yarn bare8x:install
+yarn bare8x:ios
+yarn bare8x:android
+
 ```
 
 ## Installation
 
 ```bash
-yarn add "@ravinandan25/react-native-lottie-splash-screen" "lottie-react-native@7.3.4"
+yarn add "@ravinandan25/react-native-lottie-splash-screen"
 cd ios && bundle install && bundle exec pod install
 ```
 
